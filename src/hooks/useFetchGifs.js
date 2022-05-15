@@ -8,14 +8,12 @@ export const useFecthGifs = (category) => {
   });
 
   useEffect(() => {
-    setTimeout(() => {
-      getGifs(category).then((gifs) =>
-        setState({
-          data: gifs,
-          loading: false,
-        })
-      );
-    }, 2000);
+    getGifs(category).then((gifs) =>
+      setState({
+        data: gifs,
+        loading: false,
+      })
+    );
   }, [category]);
 
   return state;
